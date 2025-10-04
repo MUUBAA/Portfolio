@@ -23,6 +23,24 @@
       "description": "Diagram of a distributed real-time data processing system.",
       "imageUrl": "https://images.unsplash.com/photo-1664526937033-fe2c11f1be25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkaXN0cmlidXRlZCUyMHN5c3RlbXxlbnwwfHx8fDE3NTk1NjEzNDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "distributed system"
+    },
+    {
+      "id": "project-bert-training",
+      "description": "Abstract visualization of a machine learning model's neural network.",
+      "imageUrl": "https://images.unsplash.com/photo-1696253900653-e9938064f24c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYWNoaW5lJTIwbGVhcm5pbmclMjBtb2RlbHxlbnwwfHx8fDE3NTk2NDQ2NDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "machine learning model"
+    },
+    {
+      "id": "project-youtube-transcription",
+      "description": "Illustration of audio waveforms being processed for transcription.",
+      "imageUrl": "https://images.unsplash.com/photo-1616329941467-4d4021655e97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx2aWRlbyUyMHRyYW5zY3JpcHRpb258ZW58MHx8fHwxNzU5NjQ0NjgwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "video transcription"
+    },
+    {
+      "id": "project-web-scraping",
+      "description": "Digital representation of data being scraped from a web page.",
+      "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXRhJTIwc2NyYXBpbmd8ZW58MHx8fHwxNzU5NjQ0NzExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data scraping"
     }
   ]
 }

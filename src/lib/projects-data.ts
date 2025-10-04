@@ -1,13 +1,18 @@
+
 export type Project = {
     title: string;
     summary: string;
     tech: string[];
-    status: 'Live' | 'In Development' | 'Conceptual Project';
-    demoUrl: string;
-    repoUrl: string;
-    imageUrl: string;
+    status: 'Live' | 'In Development' | 'Conceptual Project' | 'Completed';
+    demoUrl?: string;
+    repoUrl?: string;
+    detailsUrl?: string;
     imageId: string;
     featured: boolean;
+    category: 'AI/ML' | 'Full-Stack' | 'Research' | 'Distributed Systems';
+    year: number;
+    client: string;
+    duration: string;
 };
   
 export const projects: Project[] = [
@@ -18,9 +23,12 @@ export const projects: Project[] = [
         status: 'In Development',
         demoUrl: '#',
         repoUrl: '#',
-        imageUrl: '',
         imageId: 'project-career-toolkit',
         featured: true,
+        category: 'AI/ML',
+        year: 2024,
+        client: 'Freelance Project',
+        duration: '3 months',
     },
     {
         title: 'ENSA Khouribga University Website',
@@ -29,9 +37,12 @@ export const projects: Project[] = [
         status: 'Live',
         demoUrl: '#',
         repoUrl: '#',
-        imageUrl: '',
         imageId: 'project-university-website',
         featured: true,
+        category: 'Full-Stack',
+        year: 2024,
+        client: 'ENSA Khouribga University',
+        duration: '2 months',
     },
     {
         title: 'Distributed Real-Time Voting System',
@@ -40,8 +51,51 @@ export const projects: Project[] = [
         status: 'Conceptual Project',
         demoUrl: '#',
         repoUrl: '#',
-        imageUrl: '',
         imageId: 'project-voting-system',
         featured: true,
+        category: 'Distributed Systems',
+        year: 2024,
+        client: 'Freelance Project',
+        duration: '4 months',
+    },
+    {
+        title: 'BERT Training Using PDF Documents',
+        summary: 'Fine-tuned a BERT model on a custom corpus of PDF documents for specialized domain-specific language understanding.',
+        tech: ['Python', 'PyTorch', 'Hugging Face', 'BERT', 'Data Modeling'],
+        status: 'Completed',
+        repoUrl: '#',
+        imageId: 'project-bert-training',
+        featured: false,
+        category: 'AI/ML',
+        year: 2025,
+        client: 'Freelance Project',
+        duration: '6 weeks',
+    },
+    {
+        title: 'YouTube Transcription Web App',
+        summary: 'A Python-based web application that uses NLP to transcribe YouTube videos, providing users with downloadable and searchable transcripts.',
+        tech: ['Python', 'Flask', 'React', 'NLP', 'YouTube API'],
+        status: 'Completed',
+        demoUrl: '#',
+        repoUrl: '#',
+        imageId: 'project-youtube-transcription',
+        featured: false,
+        category: 'AI/ML',
+        year: 2025,
+        client: 'Freelance Project',
+        duration: '1 month',
+    },
+    {
+        title: 'Web Scraping for Schneider Electric',
+        summary: 'Developed a robust web scraping solution to gather product data and competitive intelligence for Schneider Electric.',
+        tech: ['Python', 'BeautifulSoup', 'Selenium', 'Pandas'],
+        status: 'Completed',
+        repoUrl: '#',
+        imageId: 'project-web-scraping',
+        featured: false,
+        category: 'Full-Stack',
+        year: 2025,
+        client: 'Freelance Project',
+        duration: '3 weeks',
     },
 ];

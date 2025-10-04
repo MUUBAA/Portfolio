@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -61,12 +62,12 @@ export function FeaturedProjects() {
                   </div>
                 </CardContent>
                 <CardFooter className="flex gap-2">
-                  <Button asChild variant="outline">
+                  {project.demoUrl && <Button asChild variant="outline">
                     <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">Live Demo</a>
-                  </Button>
-                  <Button asChild variant="ghost">
+                  </Button>}
+                  {project.repoUrl && <Button asChild variant="ghost">
                      <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
-                  </Button>
+                  </Button>}
                 </CardFooter>
               </Card>
             );
