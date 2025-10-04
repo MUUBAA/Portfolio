@@ -85,7 +85,7 @@ export default function AboutPage() {
             </div>
             <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {aboutData.expertise.map((category) => (
-                <Card key={category.category} className="bg-card/50 border-white/10 hover:bg-card/70 transition-colors">
+                <Card key={category.category} className="bg-card/50 border-white/10">
                   <CardHeader>
                     <CardTitle className='text-xl'>{category.category}</CardTitle>
                   </CardHeader>
@@ -138,7 +138,7 @@ export default function AboutPage() {
               {aboutData.achievements.map((item, index) => (
                 <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'} mb-12`}>
                   <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
-                    <div className="p-4 rounded-lg bg-card/50 border border-white/10">
+                    <div className="p-4 rounded-lg bg-card/50 border border-white/10 card">
                         <p className="text-muted-foreground">{item.description}</p>
                         <h3 className="font-bold text-lg mt-1">{item.title}</h3>
                     </div>
@@ -194,7 +194,7 @@ export default function AboutPage() {
          {/* Research CTA */}
          <section id="research-cta" className="py-12 md:py-24 bg-black/20">
           <div className="container px-4 md:px-6">
-            <div className="max-w-4xl mx-auto bg-card/50 p-8 rounded-lg border border-white/10 text-center">
+            <div className="max-w-4xl mx-auto bg-card/50 p-8 rounded-lg border border-white/10 card text-center">
                 <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl">
                 {aboutData.researchCTA.headline}
                 </h2>

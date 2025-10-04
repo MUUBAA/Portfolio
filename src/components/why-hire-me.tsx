@@ -48,7 +48,7 @@ export function WhyHireMe() {
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
-            <Card key={feature.title} className="bg-card/50 border-white/10 hover:bg-card/70 hover:-translate-y-2 transition-transform duration-300">
+            <Card key={feature.title} className="bg-card/50 border-white/10">
               <CardHeader className="flex flex-row items-center gap-4">
                 {feature.icon}
                 <CardTitle>{feature.title}</CardTitle>
