@@ -16,7 +16,7 @@ export function ResearchExpertise() {
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-1 lg:grid-cols-3">
           {expertiseData.map((expertise) => (
-            <Card key={expertise.category} className="bg-card/50 border-white/10 flex flex-col hover:bg-card/70 hover:-translate-y-2 transition-transform duration-300">
+            <Card key={expertise.category} className="bg-card/50 border-white/10 flex flex-col">
               <CardHeader className="flex flex-row items-center gap-4">
                 {expertise.icon}
                 <CardTitle>{expertise.category}</CardTitle>

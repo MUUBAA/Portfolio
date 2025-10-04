@@ -33,10 +33,10 @@ export function FeaturedProjects() {
                 : 'bg-blue-500/20 text-blue-400 border-blue-500/30';
 
             return (
-              <Card key={project.title} className="bg-card/50 border-white/10 flex flex-col hover:bg-card/70 hover:-translate-y-2 transition-transform duration-300">
+              <Card key={project.title} className="bg-card/50 border-white/10 flex flex-col">
                 <CardHeader>
                   {projectImage && (
-                     <div className="relative aspect-video w-full rounded-lg overflow-hidden border border-white/10">
+                     <div className="card-media relative aspect-video w-full rounded-lg overflow-hidden border border-white/10">
                         <Image
                             alt={projectImage.description}
                             className="object-cover"
