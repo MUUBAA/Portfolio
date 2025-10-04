@@ -7,6 +7,12 @@
       "imageHint": "pixel art workstation"
     },
     {
+      "id": "about-portrait",
+      "description": "A portrait of a developer in a futuristic lab setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1639762681057-408e52192e50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTk3MzI0MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "developer portrait"
+    },
+    {
       "id": "project-career-toolkit",
       "description": "Abstract visualization of AI data streams and user profiles.",
       "imageUrl": "https://images.unsplash.com/photo-1717501220725-83f151c447e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxBSSUyMGRhdGF8ZW58MHx8fHwxNzU5NDY3MjEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
