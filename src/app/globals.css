@@ -59,6 +59,11 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+
+  .animated-gradient {
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+  }
 }
 
 .gradient-text {

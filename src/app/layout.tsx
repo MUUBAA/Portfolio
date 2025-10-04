@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark h-full" style={{ colorScheme: 'dark' }}>
-      <body className={cn(inter.variable, outfit.variable, spaceGrotesk.variable, dmSans.variable, 'font-body antialiased min-h-screen bg-gradient-to-b from-[#0B1020] to-[#3B1C7C] text-foreground flex flex-col')}>
+      <body className={cn(inter.variable, outfit.variable, spaceGrotesk.variable, dmSans.variable, 'font-body antialiased min-h-screen bg-gradient-to-br from-[#0B1020] via-[#1A1A3D] to-[#3B1C7C] text-foreground flex flex-col animated-gradient')}>
         {children}
         <Toaster />
       </body>
