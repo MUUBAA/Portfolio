@@ -64,3 +64,7 @@ body {
 .gradient-text {
   @apply bg-clip-text text-transparent;
 }
+
+nav a:hover > span {
+  transform: scaleX(1);
+}
