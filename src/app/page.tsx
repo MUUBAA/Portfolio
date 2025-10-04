@@ -7,6 +7,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { WhyHireMe } from '@/components/why-hire-me';
 import { FeaturedProjects } from '@/components/featured-projects';
 import { ResearchExpertise } from '@/components/research-expertise';
+import { CallToAction } from '@/components/call-to-action';
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find((p) => p.id === 'hero-workstation');
@@ -59,6 +60,7 @@ export default function Home() {
         <WhyHireMe />
         <FeaturedProjects />
         <ResearchExpertise />
+        <CallToAction />
       </main>
       <AppFooter />
     </>
