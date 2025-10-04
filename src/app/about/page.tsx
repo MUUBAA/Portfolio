@@ -209,7 +209,7 @@ export default function AboutPage() {
                 </Button>
                 <Button asChild size="lg" variant="outline">
                     <Link href="/experience">View Experience</Link>
-                Button>
+                </Button>
                 </div>
             </div>
           </div>
