@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -7,7 +8,7 @@ const navLinks = [
   { href: '/projects', label: 'Projects' },
   { href: '#gallery', label: 'Gallery' },
   { href: '/about', label: 'About' },
-  { href: '#experience', label: 'Experience' },
+  { href: '/experience', label: 'Experience' },
   { href: '#contact', label: 'Contact' },
 ];
 
