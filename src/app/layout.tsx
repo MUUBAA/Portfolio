@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark h-full" style={{ colorScheme: 'dark' }}>
+    <html lang="en" className="dark" style={{ colorScheme: 'dark' }}>
       <body className={cn(inter.variable, outfit.variable, spaceGrotesk.variable, dmSans.variable, 'font-body antialiased min-h-screen text-foreground flex flex-col animated-gradient')}>
         <BackgroundFX />
         <div className="relative z-10 flex flex-col flex-grow">
