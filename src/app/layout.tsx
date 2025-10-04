@@ -10,11 +10,11 @@ const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space
 const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-dm-sans' });
 
 export const metadata: Metadata = {
-  title: 'Abdelmajid NIDNASSER — PhD Candidate & Data Engineer',
-  description: 'A computer science engineer and PhD candidate, I specialize in conducting research in web privacy and data protection.',
+  title: 'Abdullah Mubasir — FullStack Developer & AI Engineer',
+  description: 'A FullStack Developer and AI Engineer specializing in building intelligent, scalable, and user-centric AI-powered products.',
   openGraph: {
-    title: 'Abdelmajid NIDNASSER — PhD Candidate & Data Engineer',
-    description: 'A computer science engineer and PhD candidate, I specialize in conducting research in web privacy and data protection.',
+    title: 'Abdullah Mubasir — FullStack Developer & AI Engineer',
+    description: 'A FullStack Developer and AI Engineer specializing in building intelligent, scalable, and user-centric AI-powered products.',
     images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 };

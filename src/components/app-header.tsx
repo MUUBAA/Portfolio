@@ -17,10 +17,10 @@ export function AppHeader() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-3 text-lg font-bold text-foreground hover:text-primary transition-colors" prefetch={false}>
           <Avatar className="h-8 w-8">
-            <AvatarImage src="https://picsum.photos/seed/avatar/32/32" alt="Abdelmajid NIDNASSER" />
-            <AvatarFallback>AN</AvatarFallback>
+            <AvatarImage src="https://picsum.photos/seed/avatar/32/32" alt="Abdullah Mubasir" />
+            <AvatarFallback>AM</AvatarFallback>
           </Avatar>
-          Abdelmajid NIDNASSER
+          Abdullah Mubasir
         </Link>
         <nav className="hidden md:flex items-center gap-4 text-sm font-medium">
           {navLinks.map((link) => (

@@ -10,9 +10,9 @@ export function AppFooter() {
           <div className="flex flex-col gap-2">
             <Link href="/" className="flex items-center gap-2" prefetch={false}>
                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center font-bold text-primary-foreground">
-                AN
+                AM
               </div>
-              <span className="text-lg font-bold">Abdelmajid NIDNASSER</span>
+              <span className="text-lg font-bold">Abdullah Mubasir</span>
             </Link>
             <p className="text-sm text-muted-foreground">
               Building intelligent, scalable, and user-centric AI-powered products for startups and teams.
@@ -48,7 +48,7 @@ export function AppFooter() {
           </div>
         </div>
         <div className="mt-8 border-t border-white/10 pt-4 text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} Abdelmajid NIDNASSER.
+          &copy; {new Date().getFullYear()} Abdullah Mubasir.
         </div>
       </div>
     </footer>

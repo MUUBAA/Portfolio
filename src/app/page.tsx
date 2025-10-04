@@ -4,6 +4,7 @@ import { AppHeader } from '@/components/app-header';
 import { AppFooter } from '@/components/app-footer';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { WhyHireMe } from '@/components/why-hire-me';
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find((p) => p.id === 'hero-workstation');
@@ -17,19 +18,19 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-24">
               <div className="flex flex-col justify-center space-y-4">
                 <h1 className="font-display text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                  Hi, I’m Abdelmajid
+                  Hi, I’m Abdullah
                   <br />
-                  NIDNASSER.
+                  Mubasir.
                 </h1>
                 <p className="font-display text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-blue-400 to-purple-500 gradient-text">
-                  Researching in Web Privacy & Data Protection.
+                  FullStack Developer & AI Engineer.
                 </p>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  A computer science engineer and PhD candidate, I specialize in conducting research in web privacy and data protection.
+                  A FullStack Developer and AI Engineer specializing in building intelligent, scalable, and user-centric AI-powered products.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button asChild size="lg" variant="secondary">
-                    <a href="mailto:contact@abdelmajid.com">Get in Touch</a>
+                    <a href="mailto:contact@abdullahmubasir.com">Get in Touch</a>
                   </Button>
                   <Button asChild size="lg" variant="outline">
                     <Link href="/resume.pdf">View Resume</Link>
@@ -53,6 +54,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <WhyHireMe />
       </main>
       <AppFooter />
     </>
