@@ -5,6 +5,24 @@
       "description": "A pixel art illustration of a retro computer workstation setup.",
       "imageUrl": "https://images.unsplash.com/photo-1724342388536-7ec21aa75af0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwaXhlbCUyMGFydCUyMHdvcmtzdGF0aW9ufGVufDB8fHx8MTc1OTU2MTEwNXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "pixel art workstation"
+    },
+    {
+      "id": "project-career-toolkit",
+      "description": "Abstract visualization of AI data streams and user profiles.",
+      "imageUrl": "https://images.unsplash.com/photo-1717501220725-83f151c447e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxBSSUyMGRhdGF8ZW58MHx8fHwxNzU5NDY3MjEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI data"
+    },
+    {
+      "id": "project-university-website",
+      "description": "Clean and modern university website homepage layout.",
+      "imageUrl": "https://images.unsplash.com/photo-1609831499898-a0100d320fbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx1bml2ZXJzaXR5JTIwd2Vic2l0ZXxlbnwwfHx8fDE3NTk1NDcxMTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "university website"
+    },
+    {
+      "id": "project-voting-system",
+      "description": "Diagram of a distributed real-time data processing system.",
+      "imageUrl": "https://images.unsplash.com/photo-1664526937033-fe2c11f1be25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkaXN0cmlidXRlZCUyMHN5c3RlbXxlbnwwfHx8fDE3NTk1NjEzNDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "distributed system"
     }
   ]
 }

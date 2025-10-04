@@ -5,6 +5,7 @@ import { AppFooter } from '@/components/app-footer';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { WhyHireMe } from '@/components/why-hire-me';
+import { FeaturedProjects } from '@/components/featured-projects';
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find((p) => p.id === 'hero-workstation');
@@ -55,6 +56,7 @@ export default function Home() {
           </div>
         </section>
         <WhyHireMe />
+        <FeaturedProjects />
       </main>
       <AppFooter />
     </>
