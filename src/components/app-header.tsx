@@ -3,10 +3,12 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -18,6 +20,7 @@ const navLinks = [
 
 export function AppHeader() {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="bg-background/30 backdrop-blur-lg border-b border-white/10 shadow-sm sticky top-0 z-40">
@@ -34,7 +37,10 @@ export function AppHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-muted-foreground hover:text-foreground transition-colors relative py-2 px-4 rounded-md hover:bg-accent/20"
+              className={cn(
+                "text-muted-foreground hover:text-foreground transition-colors relative py-2 px-4 rounded-md hover:bg-accent/20",
+                pathname === link.href && "bg-accent/20 text-foreground"
+              )}
             >
               {link.label}
             </Link>
