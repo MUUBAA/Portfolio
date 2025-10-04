@@ -1,10 +1,10 @@
 {
   "placeholderImages": [
     {
-      "id": "contact-office-meeting",
-      "description": "A modern office meeting setting with people collaborating",
-      "imageUrl": "https://images.unsplash.com/photo-1606836591695-4d58a73eba1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxvZmZpY2UlMjBtZWV0aW5nfGVufDB8fHx8MTc1ODgzMTc2NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "office meeting"
+      "id": "hero-workstation",
+      "description": "A pixel art illustration of a retro computer workstation setup.",
+      "imageUrl": "https://images.unsplash.com/photo-1724342388536-7ec21aa75af0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwaXhlbCUyMGFydCUyMHdvcmtzdGF0aW9ufGVufDB8fHx8MTc1OTU2MTEwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pixel art workstation"
     }
   ]
 }

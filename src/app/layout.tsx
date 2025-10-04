@@ -2,10 +2,21 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
+import { Inter, Outfit, Space_Grotesk, DM_Sans } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
+const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk' });
+const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-dm-sans' });
 
 export const metadata: Metadata = {
-  title: 'Seera Digital Twin',
-  description: 'A Next.js clone of the Seera contact page with AI-powered content suggestions.',
+  title: 'Abdelmajid NIDNASSER — PhD Candidate & Data Engineer',
+  description: 'A computer science engineer and PhD candidate, I specialize in conducting research in web privacy and data protection.',
+  openGraph: {
+    title: 'Abdelmajid NIDNASSER — PhD Candidate & Data Engineer',
+    description: 'A computer science engineer and PhD candidate, I specialize in conducting research in web privacy and data protection.',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+  },
 };
 
 export default function RootLayout({
@@ -14,13 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-      </head>
-      <body className={cn('font-body antialiased min-h-screen bg-background flex flex-col')}>
+    <html lang="en" className="dark h-full" style={{ colorScheme: 'dark' }}>
+      <body className={cn(inter.variable, outfit.variable, spaceGrotesk.variable, dmSans.variable, 'font-body antialiased min-h-screen bg-gradient-to-b from-[#0B1020] to-[#3B1C7C] text-foreground flex flex-col')}>
         {children}
         <Toaster />
       </body>
