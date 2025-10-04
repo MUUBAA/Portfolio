@@ -29,15 +29,14 @@ export function AppHeader() {
           </Avatar>
           Abdullah Mubasir
         </Link>
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-2 text-sm font-medium">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-muted-foreground hover:text-foreground transition-colors relative py-2"
+              className="text-muted-foreground hover:text-foreground transition-colors relative py-2 px-4 rounded-md hover:bg-accent/20"
             >
               {link.label}
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
             </Link>
           ))}
         </nav>
