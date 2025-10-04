@@ -48,7 +48,7 @@ export function AppFooter() {
           </div>
         </div>
         <div className="mt-8 border-t border-white/10 pt-4 text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} Abdullah Mubasir.
+          &copy; 2025 Abdullah Mubasir.
         </div>
       </div>
     </footer>
