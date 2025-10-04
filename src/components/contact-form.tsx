@@ -1,3 +1,4 @@
+
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -7,16 +8,24 @@ import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
 import { submitContactForm } from '@/app/actions';
 import { useState, useTransition } from 'react';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Send } from 'lucide-react';
+import { Label } from './ui/label';
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
+  fullName: z.string().min(2, { message: 'Full name must be at least 2 characters.' }),
   email: z.string().email({ message: 'Please enter a valid email address.' }),
-  phone: z.string().optional(),
+  inquiryType: z.string().min(1, { message: 'Please select an inquiry type.' }),
+  subject: z.string().min(5, { message: 'Subject must be at least 5 characters.' }),
   message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
+  company: z.string().optional(),
+  consent: z.boolean().refine((val) => val === true, {
+    message: 'You must agree to the terms.',
+  }),
 });
 
 export function ContactForm() {
@@ -26,10 +35,13 @@ export function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: '',
+      fullName: '',
       email: '',
-      phone: '',
+      inquiryType: '',
+      subject: '',
       message: '',
+      company: '',
+      consent: false,
     },
   });
 
@@ -66,12 +78,12 @@ export function ContactForm() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <FormField
             control={form.control}
-            name="name"
+            name="fullName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>Full Name *</FormLabel>
                 <FormControl>
-                  <Input placeholder="Your Name" {...field} />
+                  <Input placeholder="Your full name" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -82,7 +94,7 @@ export function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel>Email Address *</FormLabel>
                 <FormControl>
                   <Input placeholder="your.email@example.com" {...field} />
                 </FormControl>
@@ -91,34 +103,104 @@ export function ContactForm() {
             )}
           />
         </div>
+
         <FormField
           control={form.control}
-          name="phone"
+          name="inquiryType"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Phone Number (Optional)</FormLabel>
+              <FormLabel>Inquiry Type</FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select an inquiry type" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="General Question">General Question</SelectItem>
+                  <SelectItem value="Freelance Project">Freelance Project</SelectItem>
+                  <SelectItem value="Research Collaboration">Research Collaboration</SelectItem>
+                  <SelectItem value="Speaking/Workshop">Speaking/Workshop</SelectItem>
+                  <SelectItem value="Other">Other</SelectItem>
+                </SelectContent>
+              </Select>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        
+        <FormField
+          control={form.control}
+          name="subject"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Subject *</FormLabel>
               <FormControl>
-                <Input placeholder="+1 (555) 123-4567" {...field} />
+                <Input placeholder="Brief description of your inquiry" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
+
         <FormField
           control={form.control}
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Your Message</FormLabel>
+              <FormLabel>Message *</FormLabel>
               <FormControl>
-                <Textarea placeholder="Tell us how we can help..." className="min-h-[120px]" {...field} />
+                <Textarea placeholder="Tell me more about the opportunity, project, timeline, etc..." className="min-h-[120px]" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" disabled={isPending}>
-          {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+
+        <FormField
+          control={form.control}
+          name="company"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Company / Organization (Optional)</FormLabel>
+              <FormControl>
+                <Input placeholder="Your company name" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="consent"
+          render={({ field }) => (
+            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 bg-background/50">
+              <FormControl>
+                <Checkbox
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                />
+              </FormControl>
+              <div className="space-y-1 leading-none">
+                <Label
+                  htmlFor="consent"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  I agree to the storage of my data for the purpose of this inquiry.
+                </Label>
+                <FormMessage />
+              </div>
+            </FormItem>
+          )}
+        />
+
+        <Button type="submit" className="w-full" disabled={isPending}>
+          {isPending ? (
+            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+          ) : (
+            <Send className="mr-2 h-4 w-4" />
+          )}
           Send Message
         </Button>
       </form>
