@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import '../styles/background-fx.css';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 import { Inter, Outfit, Space_Grotesk, DM_Sans } from 'next/font/google';
+import { BackgroundFX } from '@/components/background-fx';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
@@ -26,8 +28,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark h-full" style={{ colorScheme: 'dark' }}>
-      <body className={cn(inter.variable, outfit.variable, spaceGrotesk.variable, dmSans.variable, 'font-body antialiased min-h-screen bg-gradient-to-br from-[#0B1020] via-[#1A1A3D] to-[#3B1C7C] text-foreground flex flex-col animated-gradient')}>
-        {children}
+      <body className={cn(inter.variable, outfit.variable, spaceGrotesk.variable, dmSans.variable, 'font-body antialiased min-h-screen text-foreground flex flex-col animated-gradient')}>
+        <BackgroundFX />
+        <div className="relative z-10 flex flex-col min-h-screen">
+          {children}
+        </div>
         <Toaster />
       </body>
     </html>

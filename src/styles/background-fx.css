@@ -1,0 +1,166 @@
+/* Layered starfield effect */
+.background-fx-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 
+  The starfields are generated using a large number of box-shadows.
+  This is a performant way to render thousands of dots without creating DOM elements.
+*/
+.stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 
+    1876px 133px #A5B4FC, 43px 1827px #93C5FD, 1492px 1432px #93C5FD, 1341px 1152px #93C5FD, 
+    769px 1289px #93C5FD, 1789px 1653px #93C5FD, 626px 1770px #93C5FD, 1859px 1276px #93C5FD, 
+    1639px 24px #93C5FD, 1822px 1273px #93C5FD, 1146px 1869px #93C5FD, 129px 1253px #93C5FD, 
+    1484px 1712px #93C5FD, 477px 1195px #93C5FD, 1373px 744px #93C5FD, 145px 338px #93C5FD, 
+    1417px 1568px #93C5FD, 111px 1314px #93C5FD, 1906px 1422px #93C5FD, 1139px 923px #93C5FD;
+  animation: animStar 60s linear infinite, twinkle 4s infinite;
+}
+
+.stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 
+    1504px 47px #A5B4FC, 1802px 417px #93C5FD, 1270px 1475px #93C5FD, 1025px 507px #93C5FD, 
+    1530px 1238px #93C5FD, 1222px 195px #93C5FD, 1039px 1017px #93C5FD, 1195px 129px #93C5FD, 
+    1029px 1141px #93C5FD, 1321px 1792px #93C5FD, 350px 1658px #93C5FD, 1115px 130px #93C5FD, 
+    1152px 1582px #93C5FD, 1126px 899px #93C5FD, 1362px 1803px #93C5FD, 1345px 1435px #93C5FD;
+  animation: animStar 120s linear infinite, twinkle 5s infinite;
+}
+
+.stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 
+    1086px 877px #A5B4FC, 804px 537px #93C5FD, 103px 1890px #93C5FD, 1334px 1502px #93C5FD, 
+    788px 1099px #93C5FD, 989px 1386px #93C5FD, 1928px 1357px #93C5FD, 1318px 1937px #93C5FD, 
+    109px 1496px #93C5FD, 831px 1563px #93C5FD, 396px 127px #93C5FD, 1534px 1548px #93C5FD;
+  animation: animStar 180s linear infinite, twinkle 6s infinite;
+}
+
+.stars, .stars2, .stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+}
+
+@keyframes animStar {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-2000px); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.3; }
+}
+
+/* Floating squares effect */
+.squares-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.square {
+  position: absolute;
+  display: block;
+  list-style: none;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  animation: float ease-in-out infinite;
+  border-radius: 8px;
+  will-change: transform, opacity;
+  opacity: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-40px) rotate(3deg);
+    opacity: 0;
+  }
+}
+
+/* Shooting stars effect */
+.shooting-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.shooting-star {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(-45deg, rgba(147, 197, 253, 0.8), rgba(165, 180, 252, 0));
+    border-radius: 999px;
+    filter: drop-shadow(0 0 6px rgba(147, 197, 253, 0.5));
+    animation: tail 3s ease-in-out infinite, shooting 3s ease-in-out infinite;
+    will-change: transform;
+}
+
+@keyframes tail {
+  0% { width: 0; }
+  30% { width: 100px; }
+  100% { width: 0; }
+}
+
+@keyframes shooting {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(100vw + 200px)); }
+}
+
+.shooting-star:nth-child(1) {
+    top: calc(50% - 100px);
+    left: calc(50% - 200px);
+    animation-delay: 0s;
+}
+
+.shooting-star:nth-child(2) {
+    top: calc(50% - 50px);
+    left: calc(50% - 400px);
+    animation-delay: 1s;
+    animation-duration: 4s;
+}
+
+.shooting-star:nth-child(3) {
+    top: calc(50% + 150px);
+    left: calc(50% - 300px);
+    animation-delay: 2.5s;
+    animation-duration: 3.5s;
+}
+
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .stars, .stars2, .stars3, .square, .shooting-star {
+    animation: none !important;
+  }
+  .animated-gradient {
+    animation: none;
+    background: #0B1020; /* Static fallback */
+  }
+}
