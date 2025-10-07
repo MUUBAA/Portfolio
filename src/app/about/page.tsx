@@ -21,14 +21,14 @@ export default function AboutPage() {
         <section className="min-h-[calc(100vh-4rem)] flex items-center justify-center py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-              <div className="flex flex-col justify-center space-y-6">
+              <div className="flex flex-col justify-center space-y-6 text-center lg:text-left">
                 <div className="text-sm font-medium text-muted-foreground tracking-wider">{aboutData.hero.location}</div>
                 <h1 className="font-display text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
                   {aboutData.hero.headline.part1}
                   <span className="bg-gradient-to-r from-blue-400 to-purple-500 gradient-text">{aboutData.hero.headline.part2}</span>
                 </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">{aboutData.hero.bio}</p>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <p className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0">{aboutData.hero.bio}</p>
+                <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center lg:justify-start">
                   <Button asChild size="lg">
                     <a href={`mailto:${aboutData.ctaEmail}`}>Let's Work Together</a>
                   </Button>
@@ -39,7 +39,7 @@ export default function AboutPage() {
               </div>
               <div className="relative flex items-center justify-center">
                 {aboutImage && (
-                  <div className="relative w-full max-w-md aspect-square rounded-lg bg-black/20 p-4 border border-white/10 shadow-lg" style={{'--glow-color': '#60A5FA'} as React.CSSProperties}>
+                  <div className="relative w-full max-w-sm sm:max-w-md aspect-square rounded-lg bg-black/20 p-4 border border-white/10 shadow-lg" style={{'--glow-color': '#60A5FA'} as React.CSSProperties}>
                     <Image
                       alt={aboutImage.description}
                       className="object-cover rounded-md"
@@ -129,30 +129,39 @@ export default function AboutPage() {
 
         {/* Key Achievements Section */}
         <section id="achievements" className="py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Key Achievements</h2>
-            </div>
-            <div className="mt-12 relative max-w-3xl mx-auto">
-              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2"></div>
-              {aboutData.achievements.map((item, index) => (
-                <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'} mb-12`}>
-                  <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
-                    <div className="p-4 rounded-lg bg-card/50 border border-white/10 card">
-                        <p className="text-muted-foreground">{item.description}</p>
-                        <h3 className="font-bold text-lg mt-1">{item.title}</h3>
-                    </div>
-                  </div>
-                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-background p-1 rounded-full">
-                    <div className="h-8 w-8 rounded-full bg-accent flex items-center justify-center text-accent-foreground font-bold text-sm">
-                      {item.year}
-                    </div>
-                  </div>
+            <div className="container px-4 md:px-6">
+                <div className="text-center">
+                    <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Key Achievements</h2>
                 </div>
-              ))}
+                <div className="mt-12 relative max-w-3xl mx-auto">
+                    <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border md:-translate-x-1/2"></div>
+                    {aboutData.achievements.map((item, index) => (
+                        <div key={index} className="relative flex items-start md:items-center md:justify-start mb-12">
+                            <div className="md:w-5/12 hidden md:block md:text-right md:pr-8">
+                                {index % 2 === 0 && (
+                                    <div className="p-4 rounded-lg bg-card/50 border border-white/10 card">
+                                        <h3 className="font-bold text-lg mt-1">{item.title}</h3>
+                                        <p className="text-muted-foreground">{item.description}</p>
+                                    </div>
+                                )}
+                            </div>
+                            <div className="absolute left-4 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-background p-1 rounded-full md:left-1/2">
+                                <div className="h-8 w-8 rounded-full bg-accent flex items-center justify-center text-accent-foreground font-bold text-sm">
+                                    {item.year}
+                                </div>
+                            </div>
+                            <div className="w-full md:w-5/12 ml-12 md:ml-0 md:pl-8">
+                                <div className="p-4 rounded-lg bg-card/50 border border-white/10 card">
+                                    <h3 className="font-bold text-lg mt-1">{item.title}</h3>
+                                    <p className="text-muted-foreground">{item.description}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-          </div>
         </section>
+
 
         {/* Beyond the Code Section */}
         <section id="beyond-code" className="py-12 md:py-24 lg:py-32 bg-black/20">
