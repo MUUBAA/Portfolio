@@ -27,7 +27,7 @@ export function AppHeader() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-3 text-lg font-bold text-foreground hover:text-primary transition-colors" prefetch={false}>
           <Avatar className="h-8 w-8">
-            <AvatarImage src="https://picsum.photos/seed/avatar/32/32" alt="Abdullah Mubasir" />
+            <AvatarImage src="/assets/images/avatar-main.jpeg" alt="Abdullah Mubasir" />
             <AvatarFallback>AM</AvatarFallback>
           </Avatar>
           Abdullah Mubasir
@@ -59,7 +59,7 @@ export function AppHeader() {
                 <div className="grid gap-4 py-6">
                   <Link href="/" className="flex items-center gap-3 text-lg font-bold" onClick={() => setIsSheetOpen(false)}>
                      <Avatar className="h-8 w-8">
-                      <AvatarImage src="https://picsum.photos/seed/avatar/32/32" alt="Abdullah Mubasir" />
+                      <AvatarImage src="/assets/images/avatar-main.jpeg" alt="Abdullah Mubasir" />
                       <AvatarFallback>AM</AvatarFallback>
                     </Avatar>
                     Abdullah Mubasir
@@ -77,7 +77,7 @@ export function AppHeader() {
                   ))}
                   </nav>
                   <Button asChild variant="secondary" onClick={() => setIsSheetOpen(false)}>
-                    <Link href="/resume.pdf" target="_blank">
+                    <Link href="https://abdullah-mubasir-ats-calibri-improved-1.tiiny.site" target="_blank">
                       Resume
                       <span className="ml-2">→</span>
                     </Link>
@@ -88,7 +88,7 @@ export function AppHeader() {
           </div>
            <div className="hidden md:flex items-center gap-4">
             <Button asChild variant="secondary">
-                <Link href="/resume.pdf" target="_blank">
+                <Link href="/https://abdullah-mubasir-ats-calibri-improved-1.tiiny.site" target="_blank">
                 Resume
                 <span className="ml-2">→</span>
                 </Link>

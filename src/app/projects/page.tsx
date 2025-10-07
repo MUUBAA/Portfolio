@@ -162,12 +162,12 @@ export default function ProjectsPage() {
                 </p>
                 <div className="mt-8 flex flex-col gap-4 min-[400px]:flex-row justify-center">
                 <Button asChild size="lg" variant="secondary">
-                    <a href="mailto:contact@abdullahmubasir.com">
+                    <a href="mailto:contact@abduzayn709@gmail.com">
                     <Mail className="mr-2" /> Start a Conversation
                     </a>
                 </Button>
                 <Button asChild size="lg" variant="outline">
-                    <Link href="/resume.pdf" target="_blank">Download Resume</Link>
+                    <Link href="https://abdullah-mubasir-ats-calibri-improved-1.tiiny.site" target="_blank">Download Resume</Link>
                 </Button>
                 </div>
             </div>

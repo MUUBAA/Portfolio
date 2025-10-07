@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Github, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 export function AppFooter() {
   return (
@@ -9,9 +10,10 @@ export function AppFooter() {
         <div className="grid gap-8 md:grid-cols-3">
           <div className="flex flex-col gap-2">
             <Link href="/" className="flex items-center gap-2" prefetch={false}>
-               <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center font-bold text-primary-foreground">
-                AM
-              </div>
+              <Avatar className="h-8 w-8">
+            <AvatarImage src="/assets/images/avatar-main.jpeg" alt="Abdullah Mubasir" />
+            <AvatarFallback>AM</AvatarFallback>
+           </Avatar>
               <span className="text-lg font-bold">Abdullah Mubasir</span>
             </Link>
             <p className="text-sm text-muted-foreground">
@@ -30,12 +32,12 @@ export function AppFooter() {
           <div className="flex flex-col gap-4 md:items-end">
             <div className="flex items-center gap-2">
               <Button variant="ghost" size="icon" asChild>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <a href="https://github.com/MUUBAA" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/abdullah-mubasir-496887250/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>

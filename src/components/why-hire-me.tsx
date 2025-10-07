@@ -4,12 +4,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const features = [
   {
     icon: <Star className="h-8 w-8 text-accent" />,
-    title: '5-Star Rated Freelancer',
-    description: '46 reviews, perfect 5.0 rating. A history of satisfied clients and successful projects.',
+    title: 'Full Stack Developer',
+    description: '10+ live projects deployed successfully across healthcare, disaster management, and e-commerce.',
   },
   {
     icon: <Code className="h-8 w-8 text-accent" />,
-    title: '45+ Successful Projects',
+    title: '10+ Successful Projects',
     description: 'Extensive experience in backend development and creating robust REST APIs.',
   },
   {
@@ -29,8 +29,8 @@ const features = [
   },
   {
     icon: <GraduationCap className="h-8 w-8 text-accent" />,
-    title: 'INPT Engineering Student',
-    description: 'Pursuing a degree from a top engineering institute, ensuring a strong theoretical foundation.',
+    title: 'Computer Science Graduate',
+    description: 'Certified in AWS, Python (NPTEL), and C (Udemy), with strong theoretical and practical foundation.',
   },
 ];
 

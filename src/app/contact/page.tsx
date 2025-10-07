@@ -11,9 +11,9 @@ import Link from 'next/link';
 
 const contactData = {
   hero: {
-    overline: 'PhD Candidate & Data Engineer',
+    overline: 'Fullstack Developer & AI Engineer',
     title: 'From Academia to Application',
-    paragraph: "Computer Science Engineer and PhD Candidate, specializing in AI, web privacy, and data protection. I’m passionate about advancing research in generative AI and privacy-preserving systems, and I am open for research collaborations and freelance projects.",
+    paragraph: "FullStack Developer and AI Engineer, specializing in AI, web privacy, and data protection. I’m passionate about advancing research in generative AI and privacy-preserving systems, and I am open for research collaborations and freelance projects.",
     badges: [
       { text: '24h Response Time', icon: <Clock /> },
       { text: 'Open to Opportunities', icon: <Briefcase /> },
@@ -21,18 +21,18 @@ const contactData = {
     ]
   },
   profiles: {
-    avatarUrl: 'https://picsum.photos/seed/avatar/100/100',
+    avatarUrl: '/assets/images/avatar-main.jpeg',
     name: 'Abdullah Mubasir',
-    title: 'PhD Candidate & Data Engineer',
-    freelancerUrl: 'https://www.freelancer.com',
+    title: 'Fullstack Developer & AI Engineer',
+    freelancerUrl: 'https://www.freelancer.com/u/AbdullahMubasir',
     socials: {
-      linkedin: '#',
-      github: '#',
+      linkedin: 'https://www.linkedin.com/in/abdullah-mubasir-496887250/',
+      github: 'https://github.com/MUUBAA',
     }
   },
   contactInfo: {
-    email: 'abdelmajidnidnasser1@gmail.com',
-    location: 'Available for remote work globally'
+    email: 'abduzayn709@gmail.com',
+    location: 'Available for onsite, hybrid and remote work globally'
   },
   expertise: [
     { title: 'AI & Generative Models', details: 'LLMs, NLP, privacy-preserving ML' },
@@ -53,7 +53,7 @@ const contactData = {
       answer: 'I am most passionate about Python, PyTorch, and the entire Generative AI ecosystem. I also have a deep interest in building scalable, privacy-first systems using modern data engineering tools.'
     },
      {
-      question: 'What is your primary research focus as a PhD candidate?',
+      question: 'What is your primary research focus as a AI and web privacy?',
       answer: 'My PhD research is centered on the intersection of AI and web privacy. I develop novel techniques for detecting and mitigating online tracking, analyzing privacy policies at scale, and building privacy-preserving data systems.'
     }
   ]

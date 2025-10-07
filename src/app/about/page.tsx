@@ -33,7 +33,7 @@ export default function AboutPage() {
                     <a href={`mailto:${aboutData.ctaEmail}`}>Let's Work Together</a>
                   </Button>
                   <Button asChild size="lg" variant="outline">
-                    <Link href="/resume.pdf" target='_blank'>View Resume</Link>
+                    <Link href="/https://abdullah-mubasir-ats-calibri-improved-1.tiiny.site" target='_blank'>View Resume</Link>
                   </Button>
                 </div>
               </div>

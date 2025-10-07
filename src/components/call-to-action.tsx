@@ -15,7 +15,7 @@ export function CallToAction() {
             </p>
             <div className="mt-8 flex flex-col gap-4 min-[400px]:flex-row justify-center">
             <Button asChild size="lg" variant="secondary">
-                <a href="mailto:contact@abdullahmubasir.com">
+                <a href="mailto:contact@abduzayn709@gmail.com">
                 <Mail className="mr-2" /> Get in Touch
                 </a>
             </Button>
@@ -24,11 +24,11 @@ export function CallToAction() {
             </Button>
             </div>
             <div className="mt-6 flex justify-center items-center gap-4 text-sm text-muted-foreground">
-                <a href="mailto:contact@abdullahmubasir.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <a href="mailto:contact@abduzayn709@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                     <Mail className="h-4 w-4" /> Email me directly
                 </a>
                 <span className="text-white/20">|</span>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <a href="https://www.linkedin.com/in/abdullah-mubasir-496887250/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
                     <Linkedin className="h-4 w-4" /> Connect on LinkedIn
                 </a>
             </div>
