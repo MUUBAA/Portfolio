@@ -72,9 +72,9 @@ export default function ContactPage() {
               {contactData.hero.title}
             </h1>
             <p className="mt-6 max-w-3xl mx-auto text-muted-foreground md:text-xl">{contactData.hero.paragraph}</p>
-            <div className="mt-8 flex justify-center gap-4 flex-wrap">
+            <div className="mt-8 flex justify-center gap-2 sm:gap-4 flex-wrap">
               {contactData.hero.badges.map(badge => (
-                <Badge key={badge.text} variant="secondary" className="gap-2 py-1.5 px-4">
+                <Badge key={badge.text} variant="secondary" className="gap-2 py-1.5 px-3 sm:px-4">
                   {badge.icon}
                   {badge.text}
                 </Badge>
@@ -90,7 +90,7 @@ export default function ContactPage() {
 
               {/* Left Column: Contact Form */}
               <div className="lg:col-span-2">
-                <Card className="p-6 md:p-8 bg-card/50 border-white/10">
+                <Card className="p-4 sm:p-6 md:p-8 bg-card/50 border-white/10">
                   <CardHeader>
                     <CardTitle className="text-3xl">Send Me a Message</CardTitle>
                     <p className="text-muted-foreground pt-2">Have a research idea, project, or question? Fill out the form below.</p>

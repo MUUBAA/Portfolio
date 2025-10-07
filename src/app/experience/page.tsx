@@ -47,7 +47,7 @@ export default function ExperiencePage() {
         <div className="sticky top-16 z-30 bg-background/80 backdrop-blur-lg border-b border-border">
           <div className="container px-4 md:px-6">
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-              <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 h-auto">
+              <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 h-auto">
                 <TabsTrigger value="work" className="py-3 text-sm md:text-base"><Briefcase className='mr-2' />Work</TabsTrigger>
                 <TabsTrigger value="education" className="py-3 text-sm md:text-base"><GraduationCap className='mr-2' />Education</TabsTrigger>
                 <TabsTrigger value="certs" className="py-3 text-sm md:text-base"><Award className='mr-2' />Certs</TabsTrigger>
@@ -67,7 +67,7 @@ export default function ExperiencePage() {
                   {experienceData.work.map((job, index) => (
                     <Card key={index} className="bg-card/50 border-white/10">
                       <CardHeader>
-                        <div className="flex justify-between items-start">
+                        <div className="flex flex-col sm:flex-row justify-between items-start gap-2">
                           <div>
                             <CardTitle className="text-xl md:text-2xl">{job.role}</CardTitle>
                             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-2 text-sm text-muted-foreground">
@@ -76,7 +76,7 @@ export default function ExperiencePage() {
                               <span>{job.startDate} – {job.endDate || 'Present'}</span>
                             </div>
                           </div>
-                          <Badge variant="outline" className="whitespace-nowrap">{job.type}</Badge>
+                          <Badge variant="outline" className="whitespace-nowrap mt-1 sm:mt-0">{job.type}</Badge>
                         </div>
                       </CardHeader>
                       <CardContent className="space-y-4">

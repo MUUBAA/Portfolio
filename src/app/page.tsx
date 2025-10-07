@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { AppHeader } from '@/components/app-header';
@@ -19,7 +20,7 @@ export default function Home() {
         <section className="min-h-[calc(100vh-4rem)] flex items-center justify-center py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-24">
-              <div className="flex flex-col justify-center space-y-4">
+              <div className="flex flex-col justify-center space-y-4 text-center lg:text-left">
                 <h1 className="font-display text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
                   Hi, I’m Abdullah
                   <br />
@@ -28,10 +29,10 @@ export default function Home() {
                 <p className="font-display text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-blue-400 to-purple-500 gradient-text">
                   FullStack Developer & AI Engineer.
                 </p>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                <p className="max-w-[600px] text-muted-foreground md:text-xl mx-auto lg:mx-0">
                   A FullStack Developer and AI Engineer specializing in building intelligent, scalable, and user-centric AI-powered products.
                 </p>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center lg:justify-start">
                   <Button asChild size="lg" variant="secondary">
                     <a href="mailto:contact@abduzayn709@gmail.com">Get in Touch</a>
                   </Button>
