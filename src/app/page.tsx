@@ -33,10 +33,10 @@ export default function Home() {
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button asChild size="lg" variant="secondary">
-                    <a href="mailto:contact@abdullahmubasir.com">Get in Touch</a>
+                    <a href="mailto:contact@abduzayn709@gmail.com">Get in Touch</a>
                   </Button>
                   <Button asChild size="lg" variant="outline">
-                    <Link href="/resume.pdf">View Resume</Link>
+                    <Link href="https://abdullah-mubasir-ats-calibri-improved-1.tiiny.site" target="_blank" rel="noopener noreferrer">View Resume</Link>
                   </Button>
                 </div>
               </div>

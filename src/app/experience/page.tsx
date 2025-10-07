@@ -30,7 +30,7 @@ export default function ExperiencePage() {
             </p>
             <div className="mt-8 flex flex-col gap-4 min-[400px]:flex-row justify-center">
               <Button asChild size="lg" variant="outline">
-                <Link href="/resume.pdf" target="_blank">
+                <Link href="https://abdullah-mubasir-ats-calibri-improved-1.tiiny.site" target="_blank">
                   <Download className="mr-2" /> Download Resume
                 </Link>
               </Button>

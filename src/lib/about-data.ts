@@ -2,24 +2,24 @@
 export const aboutData = {
   ctaEmail: 'contact@abdullahmubasir.com',
   hero: {
-    location: 'About Me • Rabat, Morocco',
+    location: 'About Me • Tamilnadu, India',
     headline: {
       part1: 'Creating a Safe Future in the Web with ',
       part2: 'AI & Code',
     },
-    bio: "I'm a Computer Science Engineer and PhD candidate driven by a passion to create a safe digital world. My research focuses on building innovative solutions that bridge the gap between cutting-edge AI and real-world applications in web privacy and data protection.",
-    expYears: 3,
-    projectsCount: 15,
+    bio: "I'm a Computer Science Engineer driven by a passion to create a safe digital world. My research focuses on building innovative solutions that bridge the gap between cutting-edge AI and real-world applications in web privacy and data protection.",
+    expYears: 1,
+    projectsCount: 10,
   },
   journey: [
-    "My path into technology began with a curiosity for how things work, which quickly evolved into a passion for coding. This drive led me to the National Institute of Posts and Telecommunications (INPT), a top-tier engineering school in Morocco, where I honed my skills in computer science and software development.",
+    "My path into technology began with a curiosity for how things work, which quickly evolved into a passion for coding. This drive led me to the Karpagam Academy of Higher Education (KAHE), one of the top-tier University in Coimbatore, where I honed my skills in computer science and software development.",
     "During my studies, I became fascinated by the dual power of the internet to connect and to expose. This sparked my interest in web privacy and data protection. I delved into the world of AI and Machine Learning, recognizing their potential to solve some of the most complex privacy challenges.",
-    "Now, as a PhD candidate, my work is centered on the intersection of AI and web privacy. I develop novel techniques for detecting and mitigating online tracking, analyzing privacy policies at scale, and building privacy-preserving data systems. My goal is to contribute to a more transparent and trustworthy digital ecosystem.",
+    "Now, as Fullstack Developer and Ai Engineer, my work is centered on the intersection of AI and web privacy. I develop novel techniques for detecting and mitigating online tracking, analyzing privacy policies at scale, and building privacy-preserving data systems. My goal is to contribute to a more transparent and trustworthy digital ecosystem.",
   ],
   expertise: [
     {
       category: 'Programming Languages',
-      skills: ['Python', 'JavaScript', 'SQL'],
+      skills: ['C#', 'C', 'JavaScript', 'SQL'],
     },
     {
       category: 'Databases',
@@ -27,15 +27,15 @@ export const aboutData = {
     },
     {
       category: 'Data & Machine Learning',
-      skills: ['Spark', 'PySpark', 'Pandas', 'Scikit-learn', 'XGBoost', 'LightGBM', 'ETL'],
+      skills: ['TensorFlow.js', 'Brain.js', 'Synaptic.js', 'LangChain.js', 'Hugging Face Inference API (via JS)', 'OpenAI API / Azure OpenAI (JS SDK)'],
     },
     {
       category: 'Data Visualization & BI',
-      skills: ['Matplotlib', 'Seaborn', 'Plotly', 'Tableau', 'Power BI', 'Looker'],
+      skills: ['Chart.js', 'D3.js', 'Recharts', 'Plotly.js', 'Power BI', 'Tableau', 'Azure Power BI Embedded', 'Highcharts'],
     },
     {
       category: 'Web Scraping & Data Extraction',
-      skills: ['Scrapy', 'BeautifulSoup', 'Selenium', 'Custom Crawlers', 'DOM-based'],
+      skills: ['Puppeteer', 'Cheerio.js', 'Playwright', 'Node Fetch', 'Selenium (C#)', 'HtmlAgilityPack (.NET)', 'REST API Data Extraction', 'JSON/XML Parsing']
     },
     {
       category: 'Project Management & Collaboration',
@@ -66,14 +66,14 @@ export const aboutData = {
   ],
   achievements: [
     {
-      year: 2024,
-      title: 'Organizational Leadership',
-      description: 'Led student initiatives as part of the General Affairs of the Student Council at INPT.',
+      year: 2025,
+      title: 'Technical Excellence',
+      description: 'Successfully delivered over 10+ backend projects, primarily using C#.',
     },
     {
       year: 2024,
-      title: 'Technical Excellence',
-      description: 'Successfully delivered over 45 backend projects, primarily using Python.',
+      title: 'Organizational Leadership',
+      description: 'Led student initiatives as part of the General Affairs of the Student Council at KAHE.',
     },
     {
       year: 2023,
@@ -82,7 +82,7 @@ export const aboutData = {
     },
   ],
   beyond: {
-    paragraph: "Beyond the screen, I'm deeply connected to the rich culture of Morocco. I'm also an avid language learner, a firm believer in the power of open-source collaboration, and passionate about mentoring aspiring developers.",
+    paragraph: "Beyond the screen, I'm deeply connected to the rich culture of India. I'm also an avid language learner, a firm believer in the power of open-source collaboration, and passionate about mentoring aspiring developers.",
     badges: ['5 Languages', 'Continuous Learner', 'Open Source Contributor'],
   },
   closingCTA: {
